@@ -1,0 +1,76 @@
+@keyframes slideright {
+    from {
+        background-position: 70000%;
+    }
+    to {
+        background-position: 0%;
+    }
+}
+
+body {
+    background-color: rgb(250, 250, 250);
+    display: flex; /* Usar flexbox para centralizar */
+    justify-content: center; /* Centralizar horizontalmente */
+    align-items: center; /* Centralizar verticalmente */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    margin: 0; /* Remover margens do body */
+}
+
+h2 {
+    color: red;
+    font-size: 50px; 
+    position: absolute; /* Para centralizar facilmente */
+    text-align: center; /* Centralizar texto */
+    width: 100%; /* Largura total para centralizar */
+    top: 50%; /* Posicionar verticalmente */
+    transform: translateY(-50%); /* Ajustar para centralização vertical */
+}
+
+
+#startButton {
+    background-color: #4CAF50; /* Verde */
+    color: white; /* Texto branco */
+    border: none; /* Sem borda */
+    padding: 20px 50px; /* Aumentar o espaçamento interno */
+    text-align: center; /* Centralizar texto */
+    text-decoration: none; /* Sem sublinhado */
+    font-size: 24px; /* Aumentar o tamanho da fonte */
+    cursor: pointer; /* Cursor de mão */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra */
+    transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+}
+
+#startButton:hover {
+    background-color: #45a049; /* Verde mais escuro */
+    transform: translateY(-2px); /* Levanta o botão um pouco */
+}
+
+#startButton:active {
+    transform: translateY(0); /* Retorna ao normal ao clicar */
+}
+
+#desert {
+    position: absolute;
+    background-image: url("src/t-rex-background.png");
+    height: 200px;
+    width: 99%;
+    animation: slideright 600s infinite linear;
+    bottom: 0;
+}
+
+.dino {
+    background-image: url("src/t-rex.png");
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+}
+
+.obstacle {
+    background-image: url("src/cacti.png");
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+}
